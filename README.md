@@ -6,9 +6,9 @@
 Run and manage per-project shell commands with project.el
 
 ## Source code repositories:
-- upstream on sourcehut: https://git.sr.ht/~alex-iam/epx
+- upstream on codeberg: https://codeberg.org/alex-iam/epx
+- mirror on sourcehut: https://git.sr.ht/~alex-iam/epx
 - archived mirror on github: https://github.com/alex-iam/epx
-- mirror on codeberg: https://codeberg.org/alex-iam/epx
 
 # Overview
 
