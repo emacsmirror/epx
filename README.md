@@ -1,4 +1,5 @@
 [![MELPA](https://melpa.org/packages/epx-badge.svg)](https://melpa.org/#/epx)
+[![Build Status](https://ci.alex-iam.dev/job/epx/badge/icon)](https://ci.alex-iam.dev/job/epx/)
 # epx -- Emacs Project eXecutor
 
 

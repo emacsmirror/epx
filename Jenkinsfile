@@ -19,7 +19,7 @@ pipeline {
 
         stage('Setup') {
             steps {
-                sh 'git clone --depth 1 https://github.com/purcell/package-lint.git "$PACKAGE_LINT_DIR"'
+                sh 'rm -rf "$PACKAGE_LINT_DIR" && git clone --depth 1 https://github.com/purcell/package-lint.git "$PACKAGE_LINT_DIR"'
             }
         }
 
