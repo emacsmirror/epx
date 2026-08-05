@@ -1,0 +1,4 @@
+- write tests with ERT
+- fix shell quoting
+- fix non-Unix environment variables
+

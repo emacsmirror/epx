@@ -167,10 +167,20 @@ Return t if renamed, else nil."
 		 t))))
 
 
+(defun epx--commands-variable-name ()
+  "Return dir-local variable name.
+Offer to migrate a deprecated name, then pick the
+name that is in the file, defaulting to ‘epx-commands’."
+  (epx--rename-deprecated-variable)
+  (hack-dir-local-variables)
+  (if (alist-get 'local-project-cmds file-local-variables-alist nil nil #'equal)
+      'local-project-cmds
+    'epx-commands))
+
+
 (defun epx--read-commands-from-locals ()
   "Read project commands from ‘.dir-locals.el’."
-  (let ((var-name (intern (if (epx--rename-deprecated-variable) "epx-commands" "local-project-cmds"))))
-    (hack-dir-local-variables)
+  (let ((var-name (epx--commands-variable-name)))
     (alist-get var-name file-local-variables-alist nil nil #'equal)))
 
 
@@ -191,7 +201,7 @@ Return t if renamed, else nil."
 
 (defun epx--write-commands-to-locals (commands)
   "Write COMMANDS to ‘.dir-locals.el’."
-  (let ((var-name (intern (if (epx--rename-deprecated-variable) "epx-commands" "local-project-cmds"))))
+  (let ((var-name (epx--commands-variable-name)))
     (with-current-buffer (find-file-noselect (epx--commands-file))
       (delete-dir-local-variable nil var-name)
       (add-dir-local-variable nil var-name commands)

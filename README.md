@@ -96,8 +96,7 @@ working directory.
 
 # Contributing
 
-Patches, bug reports, and suggestions are welcome! Please use the
-SourceHut [mailing list](https://lists.sr.ht/~alex-iam/epx) or [issue tracker](https://todo.sr.ht/~alex-iam/epx). Or create an issue on [GitHub](https://github.com/alex-iam/epx)
+Bug reports and pull requests are welcome on [Codeberg](https://codeberg.org/alex-iam/epx)
 
 For a list of contributors, look at CONTRIBUTORS file.
 

@@ -1,3 +1,6 @@
+# 0.4.1
+- fix: `epx--rename-deprecated-variable` no longer breaks .dir-locals
+- maintenance: repository moved to Codeberg along with CI
 # 0.4.0
 - feat: add `epx-use-eshell` option to run commands in `eshell` instead of `shell`
 - refactor: extract `epx--send-to-shell` for sending commands to shell/eshell
